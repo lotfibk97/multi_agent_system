@@ -360,19 +360,19 @@ public class RuleApplet extends Applet {
 		rb.displayVariables(textArea2);
 	}
 
-public void demoVehiclesBC(RuleBase rb) {
+	public void demoVehiclesBC(RuleBase rb) {
 
-	textArea2.appendText("\n --- Starting Demo BackwardChain ---\n ") ;
-	// should be a minivan
-	((RuleVariable)rb.variableList.get("vehicle")).setValue(null) ;
-	((RuleVariable)rb.variableList.get("vehicleType")).setValue(null) ;
-	((RuleVariable)rb.variableList.get("size")).setValue("medium") ;
-	((RuleVariable)rb.variableList.get("num_wheels")).setValue("4") ;
-	((RuleVariable)rb.variableList.get("num_doors")).setValue("3") ;
-	((RuleVariable)rb.variableList.get("motor")).setValue("yes") ;
-	rb.displayVariables(textArea2) ;
-	rb.backwardChain("vehicle") ; // chain until quiescence...
-	textArea2.appendText("\n --- Stopping Demo BackwardChain! ---\n ") ;
-	rb.displayVariables(textArea2) ;
+		textArea2.appendText("\n --- Starting Demo BackwardChain ---\n ") ;
+		// should be a minivan
+		((RuleVariable)rb.variableList.get("vehicle")).setValue(null) ;
+		((RuleVariable)rb.variableList.get("vehicleType")).setValue(null) ;
+		((RuleVariable)rb.variableList.get("size")).setValue("medium") ;
+		((RuleVariable)rb.variableList.get("num_wheels")).setValue("4") ;
+		((RuleVariable)rb.variableList.get("num_doors")).setValue("3") ;
+		((RuleVariable)rb.variableList.get("motor")).setValue("yes") ;
+		rb.displayVariables(textArea2) ;
+		rb.backwardChain("vehicle") ; // chain until quiescence...
+		textArea2.appendText("\n --- Stopping Demo BackwardChain! ---\n ") ;
+		rb.displayVariables(textArea2) ;
 	}
 }
